@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Jenkins/Vagrant/Fabric : CI & CD</title>
+		<title>reveal.js – The HTML Presentation Framework</title>
 
-		<meta name="description" content="Jenkins/Vagrant/Fabric : CI & CD">
-		<meta name="author" content="Adrien Sales & Michèle Barré">
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -41,174 +41,19 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-                                    
-					<h3>Jenkins/Vagrant/Fabric : transition DevOps</h3>
-				
-					<small><a href="https://www.linkedin.com/in/adrien-sales-898b7270/">Adrien Sales</a> /
-                                            <a href="https://www.linkedin.com/in/michelebarre/">Michèle Barré</a></small>
-                                    
+					<h1>Reveal.js</h1>
+					<h3>The HTML Presentation Framework</h3>
+					<p>
+						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+					</p>
 				</section>
-				
-				
-				<!-- --------------------------------------------------------- -->
 
 				<section>
-					<h2>Transformer de la dette en avantage</h2>
-					<p>Objectifs :
-                                            
-                                        <ul>
-                                            <li>Eliminer les parties endettées et coûteuses de notre SI</li>
-                                            <li>Arrêter de parler de "philosophie DevOps" et passer à l'implémentation</li>
-                                            <li>Avancer sur les outils DevOps</li>
-                                            <li>Atteindre le déploiement continu</li>
-                                        </ul>
-						
-					</p>
-				</section>
-                                
-                                <section>
-					<h2>Synchronisation des annuaires (téléphonie, AD, RH)</h2>
-					<p>Composants principaux :
-                                            
-                                        <ul>
-                                            <li>IBM TDI (Tivoli Directory Integrator</li>
-                                            <li>ADLDS (Active Directory Lighweight Directory Services)</li>
-                                        </ul>
-                                </section>
-                                
-                                <section>
-                                    <p>IBM TDI :
-                                            
-                                        <ul>
-                                            <li>Logiciel soumis à licence</li>
-                                            <li>Uniquement utilisé sur ce processus</li>
-                                            <li>Prix : 700.000 FCFP/an pour 2 runs de 20 '/jour</li>
-                                            <li>Déployé sur un serveur Windows monté et maintenu manuellement</li>
-                                            <li>Pénible à installer/upgrader</li>
-                                            <li>Pas d'investissement en connaissance sur ce produit</li>
-                                        </ul>
-
-					</p>	
-					
-				</section>
-                                
-                                <section>
-                                    <p>Microsoft ADLDS :
-                                            
-                                            <ul>
-                                            <li>Uniquement utilisé sur ce processus</li>
-                                            <li>Actuellement pénible à installer</li>
-                                            <li>Aucun investissement en connaissance sur ce produit</li>
-                                            <li>Consolide les données</li>
-                                            <li>ADLDS tourne sur un serveur manuellement monté, sous exploité et non maîtrisé</li>
-                                        </ul>
-					</p>	
-					
-				</section>
-                                
-                                <section>
-                                    <p>Microsoft ADLDS :
-                                            
-                                            <ul>
-                                            <li>Uniquement utilisé sur ce processus</li>
-                                            <li>Actuellement pénible à installer</li>
-                                            <li>Aucun investissement en connaissance sur ce produit</li>
-                                            <li>Consolide les données</li>
-                                            <li>ADLDS tourne sur un serveur manuellement monté, sous exploité et non maîtrisé</li>
-                                        </ul>
-					</p>	
-					
-				</section>
-                                
-                                <!-- -->
-                                <section>
-					<h2>Bilan économique système et financier</h2>
+					<h2>Hello There</h2>
 					<p>
-                                            
-                                        <ul>
-                                            <li>Un serveur dédié qui tourne 24/7 pour deux exécutions quotidennes de 25'</li>
-                                            <li>Un serveur LDAP complet qui tourne pour servir < 10 Mo de données</li>
-                                            <li>Un ETL coûteux, sous-exploité et pas taillé pour une prise en main rapide par des développeurs</li>
-                                        </ul>
-						
+						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
 					</p>
 				</section>
-                                
-                                <section>
-					<h2>Objectif</h2>
-					<p>Développer un processus :
-                                            
-                                        <ul>
-                                            <li>Aisé à prendre en mains par des développeurs</li>
-                                            <li>S'appuie sur des composants open source, facilement déployables et déja exploités</li>
-                                            <li>Déployable via du code, y compris sur des plateformes typées cloud</li>
-                                            <li>Qui s'intégre nativement dans la chaîne DevOps : build continu et déploiement continu</li>
-                                        </ul>
-						
-					</p>
-				</section>
-                                
-                                <section>
-					<h2>Contraintes</h2>
-					<p>Afin de rendre ce développement déployable, nous nous sommes fixés de contraintes, les plus évolutives possibles.
-                                            
-                                            Cela passe par coller aux technologies structurantes actuellement utilisées, puis les pousser dans leurs limites
-                                            pour ouvrir les perspectives sans pour autant "forcer le passage" vers des technologies plus en rupture apparente avec celles déja utilisées.
-                                            
-                                        <ul>
-                                            <li>L'OS : CentOS 7</li>
-                                            <li>Base de donnée relationelle : PostgreSQL</li>
-                                            <li>Utilisation d'outils de déploiements maîtrisés et exploités tels que Liquibase</li>
-                                            <li>Virtualisation</li>
-                                            <li>Poursuivre dans l'investissement sur Python et industrialiser les tâches/jobs</li>
-                                        </ul>
-						
-					</p>
-				</section>
-                                
-                                <section>
-					<h2>Contraintes</h2>
-					<p>Tout est versionné et buildé en continu, pour cela on repose sur ces technologies :
-                                            
-                                        <ul>
-                                            <li>Vagrant</li>
-                                            <li>Jenkins</li>
-                                            <li>Fabric/Python</li>
-                                            <li>Git</li>
-                                            
-                                            
-                                        </ul>
-						
-					</p>
-				</section>
-                                
-                                <section>
-					<h2>Jenkins : le petit nouveau</h2>
-					<p></p>
-				</section>
-                                
-                                <section>
-					<h2>Vagrant: l'officialisation</h2>
-					<p></p>
-				</section>
-                                
-                                <section>
-					<h2>Python/fabric: l'officialisation</h2>
-					<p></p>
-				</section>
-                                
-                                
-                                
-                                
-                                <section>
-					<h2>Travis : le disparu</h2>
-					<p>Durant ce chantier, de  part le besoin d'accéder à des éléments sur notre LAN, nous n'avons pas exploité Travis CI
-                                            mais nous reviendrons sur ce point très spécifique, particulièrement impactant et  très clivant au final.
-					</p>
-				</section>
-                                
-                                
-                                
 
 				<!-- Example of nested vertical slides -->
 				<section>
