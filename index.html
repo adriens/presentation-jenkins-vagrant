@@ -107,7 +107,7 @@
                                 
                                 
                                 <section>
-					<h3>Candidat : Job de Synchronisation des annuaires (téléphonie, AD, RH)</h3>
+					<h3>Candidat : Synchronisation des annuaires (téléphonie, AD, RH)</h3>
 					<p>Composants principaux :
                                             
                                         <ul>
@@ -117,15 +117,15 @@
                                 </section>
                                 
                                 <section>
-                                    <p>IBM TDI :
+                                    <h3>IBM TDI</h3>
+                                    <p>
                                             
                                         <ul>
-                                            <li>Logiciel soumis à licence</li>
                                             <li>Uniquement utilisé sur ce processus</li>
-                                            <li>Prix : 700.000 FCFP/an pour 2 runs de 20 '/jour</li>
-                                            <li>Déployé sur un serveur Windows monté et maintenu manuellement</li>
+                                            <li>Licence 700.000 FCFP/an pour 2 runs de 20 '/jour</li>
+                                            <li>Déployé sur un serveur Windows dédié, monté et maintenu manuellement</li>
                                             <li>Pénible à installer/upgrader</li>
-                                            <li>Pas d'investissement en connaissance sur ce produit</li>
+                                            <li>Pas d'investissement en connaissance</li>
                                         </ul>
 
 					</p>	
@@ -133,28 +133,15 @@
 				</section>
                                 
                                 <section>
-                                    <p>Microsoft ADLDS :
+                                    <h3>Microsoft ADLDS</h3>
+                                    <p>
                                             
                                             <ul>
-                                            <li>Uniquement utilisé sur ce processus</li>
+                                            <li>Uniquement utilisé pour ce processus</li>
                                             <li>Actuellement pénible à installer</li>
-                                            <li>Aucun investissement en connaissance sur ce produit</li>
-                                            <li>Consolide les données</li>
-                                            <li>ADLDS tourne sur un serveur manuellement monté, sous exploité et non maîtrisé</li>
-                                        </ul>
-					</p>	
-					
-				</section>
-                                
-                                <section>
-                                    <p>Microsoft ADLDS :
-                                            
-                                            <ul>
-                                            <li>Uniquement utilisé sur ce processus</li>
-                                            <li>Actuellement pénible à installer</li>
-                                            <li>Aucun investissement en connaissance sur ce produit</li>
-                                            <li>Consolide les données</li>
-                                            <li>ADLDS tourne sur un serveur manuellement monté, sous exploité et non maîtrisé</li>
+                                            <li>Aucun investissement en connaissance</li>
+                                            <li>Consolide/stocke les données</li>
+                                            <li>Tourne sur un serveur dédié, manuellement monté, sous exploité</li>
                                         </ul>
 					</p>	
 					
@@ -162,7 +149,7 @@
                                 
                                 <!-- -->
                                 <section>
-					<h2>Bilan économique système et financier</h2>
+					<h3>Bilan système et financier</h3>
 					<p>
                                             
                                         <ul>
@@ -176,12 +163,12 @@
                                 
                                 <section>
 					<h2>Objectif</h2>
-					<p>Développer un processus :
+					<p>Implémenter un processus :
                                             
                                         <ul>
                                             <li>Aisé à prendre en mains par des développeurs</li>
                                             <li>S'appuie sur des composants open source, facilement déployables et déja exploités</li>
-                                            <li>Déployable via du code sur notre infrastructure, mais également sur des plateformes cloud ou hébergées localement sur le pays</li>
+                                            <li>Déployable via du code sur notre infrastructure, mais également sur des plateformes cloud ou hébergées</li>
                                             <li>Qui s'intégre nativement dans la chaîne DevOps : build continu et déploiement continu</li>
                                         </ul>
 						
@@ -189,12 +176,24 @@
 				</section>
                                 
                                 <section>
-					<h2>Contraintes</h2>
-					<p>Afin de rendre ce développement déployable, nous nous sommes fixés de contraintes, les plus évolutives possibles.
+					<h3>Trajectoire</h3>
+					<p>Rendre ce développement rapidement exploitable, on ne crée pas un prototype de laboratoire.
+					</p>
+				</section>
+                                
+                                <section>
+					<h2>Contraintes : mode opératoire</h2>
+					<p>
+                                        <ul>
+                                            <li>Coller aux technologies structurantes actuellement maîtrisées,</li>
+                                            <li>les pousser dans leurs limites,</li>
+                                            <li>ouvrir les perspectives vers des technologies plus en rupture apparente avec celles déja utilisées.</li>
+                                        </ul>
+                                </p>    
+                                </section>      
                                             
-                                            Cela passe par coller aux technologies structurantes actuellement utilisées, puis les pousser dans leurs limites
-                                            pour ouvrir les perspectives sans pour autant "forcer le passage" vers des technologies plus en rupture apparente avec celles déja utilisées.
-                                            
+                                <section>  
+                                    <h3>Les briques</h3>
                                         <ul>
                                             <li>L'OS : CentOS 7</li>
                                             <li>Base de donnée relationelle : PostgreSQL</li>
@@ -205,40 +204,51 @@
 						
 					</p>
 				</section>
-                                
+
                                 <section>
-					<h2>Contraintes</h2>
-					<p>Tout est versionné et buildé en continu, pour cela on repose sur ces technologies :
+					<h2>Outils</h2>
+					<p>Tout est versionné et buildé en continu, pour cela :
                                             
                                         <ul>
                                             <li>Vagrant</li>
                                             <li>Jenkins</li>
                                             <li>Fabric/Python</li>
                                             <li>Git</li>
-                                            
-                                            
                                         </ul>
 						
 					</p>
 				</section>
                                 
                                 <section>
-					<h2>Jenkins : le petit nouveau</h2>
-					<p>Moteur d'intégration continue, c'est lui qui va travailler pour nous. Déployé en protypage sur une Workstation musclée, sur
-                                            une Fedora 26 (afin de rester dans l'écosystème des rpms)</p>
-				</section>
-                                
-                                <section>
-					<h2>Jenkins : ben...et Travis ?!</h2>
-					<p>Travis est un outil parfait, cependant, accéder aux composants sur le LAN n'était pas optimal. il nous
-                                            fallait l'équivalent, chez nous (pour commencer en tout cas). Les outils ont cependant deux philosophies différentes : on pas mal cliqué et passé
-                                            de temps à monter Jenkis tel que nous en avions besoin.</p>
-				</section>
-                                
-                                <section>
 					<h2>Vagrant : l'officialisation</h2>
 					<p>Nous permet de créer et configurer des environnements de développement virtuels en toute autonomie, et via du code.</p>
 				</section>
+                                
+                                <section>
+					<h3>Jenkins</h3>
+					<img src="img/jenkins.png" alt="Jenins images"  width="40%" height="40%"/>
+				</section>
+                                
+                                
+                                <section>
+                                        <h3>Jenkins</h3>
+					<p>Moteur d'intégration continue : c'est lui qui va travailler pour nous.</p>
+				</section>
+                                
+                                <section>
+					<h2>Le petit nouveau</h2>
+					<p>Déployé en protypage sur une Workstation musclée, sur une Fedora 26 (afin de rester dans l'écosystème des rpms)
+                                        </p>
+                                        <img src="img/20171103_102613.jpg" width="29%" height="29%"/>
+				</section>
+                                
+                                <section>
+					<h3>ben...et Travis ?!</h3>
+					<p>Travis est un outil parfait, cependant, accéder aux composants sur le LAN n'était pas optimal : il nous
+                                            fallait l'équivalent, chez nous, pour commencer en tout cas.</p>
+				</section>
+                                
+                                
                                 
                                 <section>
 					<h2>Vagrant: les grands concepts</h2>
@@ -253,13 +263,13 @@
 				</section>
                                 
                                 <section>
-					<h2>Vagrant : le coût d'entrée</h2>
-                                        <p>Prise en main immédiate pour un développeur habitué à travailler sur linux,
+					<h3>Vagrant : le coût d'entrée</h3>
+                                        <p>
                                         <ul>
-                                            <li>Provisioning avec du shell : aucun background puppet ou ansible forcément requis</li>
-                                            <li>Permet de tester directement le code sur l'architecture cible sans demander d'environnement
+                                            <li>Provisioning avec du shell : aucun background puppet ou ansible requis</li>
+                                            <li>Code testé directement sur l'architecture cible sans demander d'environnement
                                                 d'intégration : ce dernier est monté par le développeur et le bootstrap documente les actions
-                                                menées, dans le code directement</li>
+                                                menées</li>
                                             <li>VirtualBox comme provider sur le poste de dev</li>
                                             <li>Culture de la construction/destruction : il est sain de régulièrement "tout casser"</li>
                                         </ul>
@@ -268,53 +278,80 @@
                                 
                                 
                                 <section>
-					<h2>Rappel de la virtualisation</h2>
-					<p>Léger rappel à faire, poser les perspectives de pourquoi etc...via un dessin peut-être</p>
+					<h3>La virtualisation : VM, OS puis APP</h3>
+                                        <p><img src="img/archi-sans-avec.png" alt="Schema de virtualisations"/></p>
 				</section>
                                 
                                 
                                 
                                 <section>
-					<h2>Python/fabric: l'officialisation</h2>
-					<p>Python est arrivé à la DSI par le SIG et ses Jobs d'intégration. Fabric permet de rendre ces scripts documentables
-                                            notamment dans leur exécution, y compris sur du code complexe</p>
+					<h3>Python/fabric: l'officialisation</h3>
                                         
+                                        <ul>
+                                            <li>Python est arrivé à la DSI par le SIG et ses Jobs d'intégration.</li>
+                                            <li>Python est utilisé par les dévelopeurs pour automatiser et documenter des tâches répétitives</li>
+                                            <li>Fabric permet de rendre ces scripts documentables notamment dans leur exécution, y compris sur du code complexe.</li>
+                                        </ul>
+                                </section>
                                         
-                                        <p>fabric est à la base est une librairie et un outil de ligne de commande permettant, via ssh, de déployer des
-                                            applications ou d'effectuer des tâches d'administration système. L'idée était donc naturellement d'intégrer cet outil
-                                        dès le packaging de nos jobs afin d'en assurer à la fois un développement cadré mais également des installations et
-                                        exécutions aisées, via de la configuration automatisable par des briques déja déployées sur notre SI (typiquement puppet).</p>
+                                <section>
+                                    <h3>Fabric</h3>
+                                    <blockquote>Fabric est à la fois une librairie et un outil de ligne de commande permettant, via ssh, de déployer des
+                                        applications ou d'effectuer des tâches d'administration système. </blockquote>
+                                </section>
+                                            
+                                <section>
+                                    <h3>Idée</h3>
+                                    <blockquote>Intégrer cet outil dès le développement de nos jobs afin d'en assurer à la fois un développement cadré mais également des installations et
+                                        exécutions aisées, via de la configuration automatisable par des briques déja déployées sur notre SI (typiquement puppet).</blockquote>
+                                </section>       
                                         
-                                        <p>Fabric permet aussi de lancer des commandes ssh sur des collections de serveur, mais dans ce cadre, c'est davantage pour ses capacités à lier
+                                <section>
+                                    <h3>Fabric et admin système</h3>
+                                        <p>Fabric permet aussi de lancer des commandes ssh sur des collections de serveurs, mais dans ce cadre, c'est davantage pour ses capacités à lier
                                         du code complexe à des tâches simples, documentées et lançables via ssh.</p>
-                                        
-                                        <p>Python : disponible très facilement sur toutes les plateformes, y compris cloud, avec un écosystème très complet qui en rend
+                                        <!-- Ajout d'un ttygif sur une commande fabric -->
+				</section>
+                                
+                                
+                                <section>
+                                    <h3>Python ?</h3>
+                                        <p>Python : packagé pour toutes les plateformes, et sous toutes les formes de packaging, avec un écosystème très complet qui en rend
                                         l'exploitation très aisée.</p>
 				</section>
                                 
 
                                 <section>
-					<h2>Travis : le disparu ?</h2>
+					<h3>Travis : le disparu ?</h3>
 					<p>Durant ce chantier, de  part le besoin d'accéder à des éléments sur notre LAN, nous n'avons pas exploité Travis CI
                                             mais nous reviendrons sur ce point très spécifique, particulièrement impactant et  très clivant au final.
 					</p>
 				</section>
                                 
                                 <section>
-					<h2>Montage de la platforme Jenkins</h2>
+					<h3>Montage de la platforme Jenkins</h3>
 					<p>Etapes de devs, composants et leur liens à développer :</p>
 				</section>
                                 
                                 <!-- Slide fondamental sur lequel bien marquer le coup -->
                                 <section>
-					<h2>Règle de conduite Vagrant !!!</h2>
-					<p>On ne stocke rien en local, on pousse/pompe vers/depuis d'autres services externes : on garde la philosophie Travis d'un "contenant" se
-                                        détruisant totalement après chaque exécution.</p>
+					<h3>Règle de conduite</h3>
+					<p>
+                                        <ul>
+                                            <li>On ne stocke rien en local</li>
+                                            <li>On pousse/pompe vers/depuis d'autres services externes</li>
+                                            <li>On part du postulat que les services nécessaires (log, base de données, ...) sont fournis par d'autres</li>
+                                        </ul>
+                                        </p>
 				</section>
+                                
+                                <section data-background-transition="slide" data-background="img/confucius.jpg" data-background-size="1000px 750px">
+                                    <blockquote>On garde la philosophie Travis d'un "contenant" se détruisant totalement après chaque exécution.</blockquote>
+                                </section>
                                 
                                 
                                 <section>
-					<h2>Jenkins au boulot : Le Job de synchronisation</h2>
+					<h3>Jenkins au boulot : Le Job de synchronisation</h3>
                                         <p>
                                         <ol>
                                             <li>Clone de la repo Git</li>
@@ -330,12 +367,17 @@
 				</section>
                                 
                                 <section>
-					<h1>Démos !</h1>
+					<h1>Démos</h1>
 				</section>
                                 
                                 <section>
 					<h1>push vs. pull</h1>
-                                        <p>Expliquer la différence fondamentale et la cible</p>
+                                        <p>
+                                        <ul>
+                                            <li>Pull : j'attends quelque'chose : je vais chercher</li>
+                                            <li>Push : j'envoie quelque'chose pour qu'un traitement se déclenche par exemple</li>
+                                        </ul>
+                                </p>
 				</section>
                                 
                                 
@@ -368,23 +410,32 @@
 				</section>
                                 
                                 <section>
-					<h2>Les bémols</h2>
+					<h3>Les bémols</h3>
 					<p>
                                         <ul>
                                             <li>Toujours besoin d'un conteneur pour les VMs</li>
                                             <li>Une VM c'est gros en mémoire/ressources</li>
                                             <li>La Box utilisée n'est pas maintenue par les infras</li>
-                                            <li>On tourne ça sur un PC sous le bureau</li>
+                                            <li>Tourne actuellement sur un PC sous le bureau</li>
                                         </ul>
                                         </p>
 				</section>
                                 
                                 <section>
-					<h2>Les bémols : le provisioning</h2>
-					<p>les gains par rapport à aujourd'hui
+					<h3>Les bémols : le provisioning</h3>
+					<p>Les gains par rapport à aujourd'hui
                                         <ul>
                                             <li>Création des VMs à la demande : actuellement 2 serveurs tournent en continu la plupart du temps pour rien et ne se mettent pas à jour</li>
                                             <li>La Box vagrant utilisée n'est pas maintenue par les infras : il suffit pour cela de créer notre propre template CentOS 7 : nous sommes dans DevOps</li>
+                                            
+                                        </ul>
+                                        </p>
+				</section>
+                                
+                                <section>
+					<h3>Les bémols : le provisioning</h3>
+					<p>Les gains par rapport à aujourd'hui
+                                        <ul>
                                             <li>On tourne ça sur un PC sous le bureau : on peut provisionner directement sur VSphere, cela se fait via le code : nous sommes dans DevOps</li>
                                             <li>Une VM c'est gros en mémoire/ressources : d'autres technologies existent, plus économiques mais nécessitent un saut technologique</li>
                                         </ul>
@@ -392,49 +443,62 @@
 				</section>
                                 
                                 <section>
-                                    <h2>Difficultés rencontrées</h2>
+                                    <h3>Difficultés rencontrées</h3>
                                     <p>
                                     <ul>
                                         <li>Pas habitué à gérer des problèmes propres aux distrib rpm : SELinux (rsync between vagrant image and code)</li>
-                                        <li>Mises à jour parfois lentes des vms ou des téléchargement initaux des boxes</li>
-                                        <li>il a fallu monter une machine complète avec un OS complet, installer les paquets, configurer Jenkins, ...</li>
-                                        <li>Sur jenkins, on clique pas mal au lieu de coder les choses</li>
-                                        <li>Quant on veut faire tourner le build sur Travis, les paquets rpm et deb n'ont pas forcément les mêmes noms</li>
+                                        <li>Mises à jour parfois lentes des vms ou des téléchargement initiaux des boxes</li>
+                                        <li>Il a fallu monter une machine complète avec un OS complet, installer les paquets, configurer Jenkins, ...</li>
                                     </ul>
                                         
                                     </p>
                                 </section>
                                 
                                 <section>
-                                    <!-- Mettre une belle image pour commecner à entamer la transition -->
-                                    <h2>Avec Travis c'est plus facile et plus rapide : </h2>
+                                    <h3>Difficultés rencontrées</h3>
+                                    <p>
                                     <ul>
-                                        <li>tout n'est que code</li>
-                                        <li>on a pas besoin de demander des accès sur des ressources</li>
-                                        <li>ça ne consomme aucune ressource sur notre infra</li>
+                                        
+                                        <li>Sur jenkins, on clique au lieu de coder les choses</li>
+                                        <li>Quant on veut faire tourner le build sur Travis, les paquets rpm et deb n'ont pas forcément les mêmes noms</li>
+                                    </ul>
+                                        
+                                    </p>
+                                </section>
+                                
+                                
+                                <section>
+                                    <!-- Mettre une belle image pour commecner à entamer la transition -->
+                                    <h3>Avec Travis c'est "plus facile et plus rapide"</h3>
+                                    <ul>
+                                        <li>Tout n'est que code, y compris la configuration du robot</li>
+                                        <li>On a pas besoin de demander des accès à des ressources</li>
+                                        <li>On ne consomme aucune ressource ni sur nos postes ni sur notre infra</li>
                                     </ul>
                                 </section>
                                 
                                 <!-- Là on amorce la question qui annonce le besoin de transition -->
+                                <section data-background-transition="slide" data-background="img/1122563.jpg">
+                                    <blockquote>Au final ce qui compte, ce n'est pas l'OS sur lequel tourne le job, mais bien que le job tourne.</blockquote>
+                                    
+                                </section>
+                                
                                 <section>
-                                    <h2>Au final ce qui compte, ce n'est pas l'OS sur lequel tourne le job, mais bien que le job tourne</h2>
-                                    <p>Comment se détacher de l'OS qui fait tourner ces jobs, finalement ? Ne peut-t-on préparer un "image" qui tournerait partout...sur 
-                                    du debian, du CentOS, du Mac, du Windows ou n'importe quel autre chose qui surait faire "tourner" ce genre de choses...et
-                                    qui serait plus centrée sur le job à faire que sur la machine.</p>
+                                    <blockquote>Ne peut-t-on préparer une petite "image" qui tournerait partout...sur 
+                                    du debian, du CentOS, du Mac, du Windows ou n'importe quel autre système qui saurait récupérer puis exécuter ce type d'artifact ?</blockquote>
                                 </section>
 
                                 <!-- Mettre un slide image pour annoncer une révolution/changement de paradigme -->
                                 
                                 <section>
-                                    <h2>Pourquoi ne pas avoir un "truc" comme Travis chez nous ?</h2>
-                                    Les options :
-                                    Travis Enterprise : mais est-ce que nous voulons vraiment ?
+                                    <h3>Travis chez nous</h3>
+                                    <p>Travis Enterprise : mais est-ce vraiment ce que nous voulons ?</p>
                                 </section>
                                 
                                 <section>
-                                    <h2>Mais que fait Travis exactement ?
-                                        Comment fait-t-il pour être si rapide ?
-                                        Détailler la log d'un build Travis (la partie docker)</h2>
+                                    <h3>Mais que fait Travis exactement ?</h3>
+                                    <p>Comment fait-t-il pour être si rapide ?
+                                        Détailler la log d'un build Travis (la partie docker)</p>
                                 </section>
                                 
                                 
