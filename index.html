@@ -40,7 +40,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section data-background-transition="slide" data-background="img/Today-I-Start-My-Journey...-1.jpg">
                                     
 					<h3>Jenkins/Vagrant/Fabric : transition DevOps</h3>
 				
@@ -58,13 +58,41 @@
                                             
                                         <ul>
                                             <li>Eliminer les parties endettées et coûteuses de notre SI</li>
-                                            <li>Arrêter de parler de "philosophie DevOps" et passer à l'implémentation</li>
+                                            <li>Arrêter de parler de "philosophie DevOps" et passer à l'implémentation : le concret</li>
                                             <li>Avancer sur les outils DevOps</li>
                                             <li>Atteindre le déploiement continu</li>
                                         </ul>
 						
 					</p>
 				</section>
+                                
+                                <section>
+					<h2>Rappel Build Continu et Déploiement continu</h2>
+					<p>
+                                            
+                                        <ul>
+                                            <li>Build Continu : </li>
+                                            <li>Déploiement Continu : </li>
+                                        </ul>
+						
+					</p>
+				</section>
+                                
+                                <section>
+					<h2>Comment savoir qu'on fait du DevOps ?</h2>
+					<p>
+                                            
+                                        <ul>
+                                            <li>On ne fait plus de demande de déploiement : on pousse un Tag</li>
+                                            <li>On ne demande plus à déployer un Job, on déploie un code via du code, une machine (ou tout autre type d'artefact) déja (pré)configurée</li>
+                                            <li>On ne déroule plus les Wikis d'installation</li>
+                                            <li>On produit des artefacts de manière automatique et transparente, qui se documentent eux-mêmes
+                                                et sont désignés pour être systématiquement cassés puis reconstruits</li>
+                                        </ul>
+						
+					</p>
+				</section>
+                                
                                 
                                 <section>
 					<h2>Synchronisation des annuaires (téléphonie, AD, RH)</h2>
@@ -141,7 +169,7 @@
                                         <ul>
                                             <li>Aisé à prendre en mains par des développeurs</li>
                                             <li>S'appuie sur des composants open source, facilement déployables et déja exploités</li>
-                                            <li>Déployable via du code, y compris sur des plateformes typées cloud</li>
+                                            <li>Déployable via du code sur notre infrastructure, mais également sur des plateformes cloud ou hébergées localement sur le pays</li>
                                             <li>Qui s'intégre nativement dans la chaîne DevOps : build continu et déploiement continu</li>
                                         </ul>
 						
@@ -184,28 +212,225 @@
                                 
                                 <section>
 					<h2>Jenkins : le petit nouveau</h2>
-					<p></p>
+					<p>Moteur d'intégration continue, c'est lui qui va travailler pour nous. Déployé en protypage sur une Workstation musclée, sur
+                                            une Fedora 26 (afin de rester dans l'écosystème des rpms)</p>
 				</section>
                                 
                                 <section>
-					<h2>Vagrant: l'officialisation</h2>
-					<p></p>
+					<h2>Jenkins : ben...et Travis ?!</h2>
+					<p>Travis est un outil parfait, cependant, accéder aux composants sur le LAN n'était pas optimal. il nous
+                                            fallait l'équivalent, chez nous (pour commencer en tout cas). Les outils ont cependant deux philosophies différentes : on pas mal cliqué et passé
+                                            de temps à monter Jenkis tel que nous en avions besoin.</p>
 				</section>
+                                
+                                <section>
+					<h2>Vagrant : l'officialisation</h2>
+					<p>Nous permet de créer et configurer des environnements de développement virtuels en toute autonomie, et via du code.</p>
+				</section>
+                                
+                                <section>
+					<h2>Vagrant: les grands concepts</h2>
+                                        <p>
+                                        <ul>
+                                            <li>Les boxes</li>
+                                            <li>Le provisioning (shell, puppet, chef, ansible)</li>
+                                            <li>Les Providers (VirtualBox, VmWare, aws)</li>
+                                            <li>La destruction</li>
+                                        </ul>
+                                        </p>
+				</section>
+                                
+                                <section>
+					<h2>Vagrant : le coût d'entrée</h2>
+                                        <p>Prise en main immédiate pour un développeur habitué à travailler sur linux,
+                                        <ul>
+                                            <li>Provisioning avec du shell : aucun background puppet ou ansible forcément requis</li>
+                                            <li>Permet de tester directement le code sur l'architecture cible sans demander d'environnement
+                                                d'intégration : ce dernier est monté par le développeur et le bootstrap documente les actions
+                                                menées, dans le code directement</li>
+                                            <li>VirtualBox comme provider sur le poste de dev</li>
+                                            <li>Culture de la construction/destruction : il est sain de régulièrement "tout casser"</li>
+                                        </ul>
+                                        </p>
+				</section>
+                                
+                                
+                                <section>
+					<h2>Rappel de la virtualisation</h2>
+					<p>Léger rappel à faire, poser les perspectives de pourquoi etc...via un dessin peut-être</p>
+				</section>
+                                
+                                
                                 
                                 <section>
 					<h2>Python/fabric: l'officialisation</h2>
-					<p></p>
+					<p>Python est arrivé à la DSI par le SIG et ses Jobs d'intégration. Fabric permet de rendre ces scripts documentables
+                                            notamment dans leur exécution, y compris sur du code complexe</p>
+                                        
+                                        
+                                        <p>fabric est à la base est une librairie et un outil de ligne de commande permettant, via ssh, de déployer des
+                                            applications ou d'effectuer des tâches d'administration système. L'idée était donc naturellement d'intégrer cet outil
+                                        dès le packaging de nos jobs afin d'en assurer à la fois un développement cadré mais également des installations et
+                                        exécutions aisées, via de la configuration automatisable par des briques déja déployées sur notre SI (typiquement puppet).</p>
+                                        
+                                        <p>Fabric permet aussi de lancer des commandes ssh sur des collections de serveur, mais dans ce cadre, c'est davantage pour ses capacités à lier
+                                        du code complexe à des tâches simples, documentées et lançables via ssh.</p>
+                                        
+                                        <p>Python : disponible très facilement sur toutes les plateformes, y compris cloud, avec un écosystème très complet qui en rend
+                                        l'exploitation très aisée.</p>
 				</section>
                                 
-                                
-                                
-                                
+
                                 <section>
-					<h2>Travis : le disparu</h2>
+					<h2>Travis : le disparu ?</h2>
 					<p>Durant ce chantier, de  part le besoin d'accéder à des éléments sur notre LAN, nous n'avons pas exploité Travis CI
                                             mais nous reviendrons sur ce point très spécifique, particulièrement impactant et  très clivant au final.
 					</p>
 				</section>
+                                
+                                <section>
+					<h2>Montage de la platforme Jenkins</h2>
+					<p>Etapes de devs, composants et leur liens à développer :</p>
+				</section>
+                                
+                                <!-- Slide fondamental sur lequel bien marquer le coup -->
+                                <section>
+					<h2>Règle de conduite Vagrant !!!</h2>
+					<p>On ne stocke rien en local, on pousse/pompe vers/depuis d'autres services externes : on garde la philosophie Travis d'un "contenant" se
+                                        détruisant totalement après chaque exécution.</p>
+				</section>
+                                
+                                
+                                <section>
+					<h2>Jenkins au boulot : Le Job de synchronisation</h2>
+                                        <p>
+                                        <ol>
+                                            <li>Clone de la repo Git</li>
+                                            <li>Boot de l'image Vagrant</li>
+                                            <li>Installation du job</li>
+                                            <li>Exécution du job de synchronisation (ssh)</li>
+                                            <li>Envoi de logs vers des plateformes dédiées</li>
+                                            <li>Récupérer le code retour</li>
+                                            <li>Déclencer un ou des événements suite au code retour, par exemple via un Webhook slack</li>
+                                            <li>Arrêt/destruction de la VM</li>
+                                        </ol>
+                                        </p>
+				</section>
+                                
+                                <section>
+					<h1>Démos !</h1>
+				</section>
+                                
+                                <section>
+					<h1>push vs. pull</h1>
+                                        <p>Expliquer la différence fondamentale et la cible</p>
+				</section>
+                                
+                                
+                                <section>
+					<h2>Le Job de synchronisation : démo en manuel</h2>
+					<p>Lancer le job manuellement, à la demande</p>
+				</section>
+                                
+                                <section>
+					<h2>Le Job de synchronisation : démo en cron</h2>
+					<p>En production, besoin d'exécutions périodiques</p>
+				</section>
+                                
+                                <section>
+					<h2>Le Job de synchronisation : déploiement continu</h2>
+					<p>Démo d'un run qui démarre tout seul suite à un événement sur du code change sur une branche spécifique</p>
+				</section>
+                                
+                                <section>
+					<h2>Déploiement continu : objectif atteint</h2>
+					<p>Rappel de toutes les étapes mises en oeuvre et mise en parallèle avec le mode actuel
+                                        <ul>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        </p>
+				</section>
+                                
+                                <section>
+					<h2>Les bémols</h2>
+					<p>
+                                        <ul>
+                                            <li>Toujours besoin d'un conteneur pour les VMs</li>
+                                            <li>Une VM c'est gros en mémoire/ressources</li>
+                                            <li>La Box utilisée n'est pas maintenue par les infras</li>
+                                            <li>On tourne ça sur un PC sous le bureau</li>
+                                        </ul>
+                                        </p>
+				</section>
+                                
+                                <section>
+					<h2>Les bémols : le provisioning</h2>
+					<p>les gains par rapport à aujourd'hui
+                                        <ul>
+                                            <li>Création des VMs à la demande : actuellement 2 serveurs tournent en continu la plupart du temps pour rien et ne se mettent pas à jour</li>
+                                            <li>La Box vagrant utilisée n'est pas maintenue par les infras : il suffit pour cela de créer notre propre template CentOS 7 : nous sommes dans DevOps</li>
+                                            <li>On tourne ça sur un PC sous le bureau : on peut provisionner directement sur VSphere, cela se fait via le code : nous sommes dans DevOps</li>
+                                            <li>Une VM c'est gros en mémoire/ressources : d'autres technologies existent, plus économiques mais nécessitent un saut technologique</li>
+                                        </ul>
+                                        </p>
+				</section>
+                                
+                                <section>
+                                    <h2>Difficultés rencontrées</h2>
+                                    <p>
+                                    <ul>
+                                        <li>Pas habitué à gérer des problèmes propres aux distrib rpm : SELinux (rsync between vagrant image and code)</li>
+                                        <li>Mises à jour parfois lentes des vms ou des téléchargement initaux des boxes</li>
+                                        <li>il a fallu monter une machine complète avec un OS complet, installer les paquets, configurer Jenkins, ...</li>
+                                        <li>Sur jenkins, on clique pas mal au lieu de coder les choses</li>
+                                        <li>Quant on veut faire tourner le build sur Travis, les paquets rpm et deb n'ont pas forcément les mêmes noms</li>
+                                    </ul>
+                                        
+                                    </p>
+                                </section>
+                                
+                                <section>
+                                    <!-- Mettre une belle image pour commecner à entamer la transition -->
+                                    <h2>Avec Travis c'est plus facile et plus rapide : </h2>
+                                    <ul>
+                                        <li>tout n'est que code</li>
+                                        <li>on a pas besoin de demander des accès sur des ressources</li>
+                                        <li>ça ne consomme aucune ressource sur notre infra</li>
+                                    </ul>
+                                </section>
+                                
+                                <!-- Là on amorce la question qui annonce le besoin de transition -->
+                                <section>
+                                    <h2>Au final ce qui compte, ce n'est pas l'OS sur lequel tourne le job, mais bien que le job tourne</h2>
+                                    <p>Comment se détacher de l'OS qui fait tourner ces jobs, finalement ? Ne peut-t-on préparer un "image" qui tournerait partout...sur 
+                                    du debian, du CentOS, du Mac, du Windows ou n'importe quel autre chose qui surait faire "tourner" ce genre de choses...et
+                                    qui serait plus centrée sur le job à faire que sur la machine.</p>
+                                </section>
+
+                                <!-- Mettre un slide image pour annoncer une révolution/changement de paradigme -->
+                                
+                                <section>
+                                    <h2>Pourquoi ne pas avoir un "truc" comme Travis chez nous ?</h2>
+                                    Les options :
+                                    Travis Enterprise : mais est-ce que nous voulons vraiment ?
+                                </section>
+                                
+                                <section>
+                                    <h2>Mais que fait Travis exactement ?
+                                        Comment fait-t-il pour être si rapide ?
+                                        Détailler la log d'un build Travis (la partie docker)</h2>
+                                </section>
+                                
+                                
+                                <section>
+                                    <h3>Virtualisation vs containerization</h3>
+                                    <img src="img/ContainerVsVM-1024x567.jpg"/>
+                                </section>
+                                
                                 
                                 
                                 
