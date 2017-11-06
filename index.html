@@ -80,12 +80,12 @@
 				</section>
                                 
                                 <section>
-					<h3>Comment savoir qu'on fait du DevOps (1/2)</h3>
+					<h3>Comment savoir si on fait du DevOps (1/2)</h3>
 					<p>
                                             
                                         <ul>
                                             <li>On ne fait plus de demande de déploiement : on pousse un Tag</li>
-                                            <li>On ne demande plus à déployer un Job, on déploie un code via du code, une machine (ou tout autre type d'artefact) déja (pré)configurée</li>
+                                            <li>On ne demande plus à déployer un Job, on déploie du code, une machine (ou tout autre type d'artefact) déja configurée</li>
                                             
                                         </ul>
 						
@@ -93,13 +93,13 @@
 				</section>
                                 
                                 <section>
-					<h3>Comment savoir qu'on fait du DevOps (2/2)</h3>
+					<h3>Comment savoir si on fait du DevOps (2/2)</h3>
 					<p>
                                             
                                         <ul>
-                                            <li>On ne déroule plus les Wikis d'installation</li>
+                                            <li>On ne déroule plus de procédures d'installation</li>
                                             <li>On produit des artefacts de manière automatique et transparente, qui se documentent eux-mêmes
-                                                et sont désignés pour être systématiquement cassés puis reconstruits</li>
+                                                et sont designés pour être cassés puis reconstruits en continu</li>
                                         </ul>
 						
 					</p>
@@ -288,7 +288,7 @@
 					<h3>Python/fabric: l'officialisation</h3>
                                         
                                         <ul>
-                                            <li>Python est arrivé à la DSI par le SIG et ses Jobs d'intégration.</li>
+                                            <li>Python est arrivé à la DSI par le SIG et ses Jobs d'intégration</li>
                                             <li>Python est utilisé par les dévelopeurs pour automatiser et documenter des tâches répétitives</li>
                                             <li>Fabric permet de rendre ces scripts documentables notamment dans leur exécution, y compris sur du code complexe.</li>
                                         </ul>
@@ -340,7 +340,7 @@
                                         <ul>
                                             <li>On ne stocke rien en local</li>
                                             <li>On pousse/pompe vers/depuis d'autres services externes</li>
-                                            <li>On part du postulat que les services nécessaires (log, base de données, ...) sont fournis par d'autres</li>
+                                            <li>On part du postulat que les services nécessaires (log, base de données, monitoring, ...) sont fournis par d'autres</li>
                                         </ul>
                                         </p>
 				</section>
@@ -356,12 +356,12 @@
                                         <ol>
                                             <li>Clone de la repo Git</li>
                                             <li>Boot de l'image Vagrant</li>
-                                            <li>Installation du job</li>
+                                            <li>Installation du job (y compris base de données)</li>
                                             <li>Exécution du job de synchronisation (ssh)</li>
                                             <li>Envoi de logs vers des plateformes dédiées</li>
                                             <li>Récupérer le code retour</li>
                                             <li>Déclencer un ou des événements suite au code retour, par exemple via un Webhook slack</li>
-                                            <li>Arrêt/destruction de la VM</li>
+                                            <li>Arrêt de la VM</li>
                                         </ol>
                                         </p>
 				</section>
@@ -374,8 +374,8 @@
 					<h1>push vs. pull</h1>
                                         <p>
                                         <ul>
-                                            <li>Pull : j'attends quelque'chose : je vais chercher</li>
-                                            <li>Push : j'envoie quelque'chose pour qu'un traitement se déclenche par exemple</li>
+                                            <li>Pull : j'attends quelque chose : je vais chercher</li>
+                                            <li>Push : j'envoie quelque chose pour qu'un traitement se déclenche par exemple</li>
                                         </ul>
                                 </p>
 				</section>
