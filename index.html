@@ -58,7 +58,7 @@
 					<p>
                                         <ul>
                                             <li>Eliminer les parties endettées et coûteuses de notre SI</li>
-                                            <li>Arrêter de parler de "philosophie DevOps" et passer à l'implémentation : le concret</li>
+                                            <li>Arrêter de parler de "philosophie DevOps" et initier l'implémentation</li>
                                             <li>Eprouver les outils DevOps</li>
                                             <li>Atteindre le déploiement continu</li>
                                         </ul>
@@ -70,12 +70,12 @@
                                 
                                 
                                 <section>
-					<h3>Build Continu ?... déploiement continu ?</h3>
+					<h3>Build & Déploiement continus</h3>
 					<p>
                                             
                                         <ul>
-                                            <li>L'activité du code qui donne le tempo</li>
-                                            <li>Build Continu : on prépare et met à disposition des artefacts en continu (au commit près)</li>
+                                            <li>L'activité du code donne le tempo</li>
+                                            <li>Build Continu : on prépare et met à disposition des artefacts en continu</li>
                                             <li>Déploiement Continu : on déploie les dits artefacts</li>
                                         </ul>
 						
@@ -83,11 +83,11 @@
 				</section>
                                 
                                 <section>
-					<h3>Comment savoir si on fait du DevOps (1/2)</h3>
+					<h3>On fait du DevOps si ... (1/2)</h3>
 					<p>
                                             
                                         <ul>
-                                            <li>On ne fait plus de demande de déploiement : on pousse un Tag</li>
+                                            <li>On ne fait plus de demande de déploiement : on pousse du code</li>
                                             <li>On ne demande plus à déployer un Job, on déploie du code, une machine (ou tout autre type d'artefact) déja configurée</li>
                                             
                                         </ul>
@@ -96,13 +96,13 @@
 				</section>
                                 
                                 <section>
-					<h3>Comment savoir si on fait du DevOps (2/2)</h3>
+					<h3>On fait du DevOps si ... (2/2)</h3>
 					<p>
                                             
                                         <ul>
                                             <li>On ne déroule plus de procédures d'installation</li>
-                                            <li>On produit des artefacts de manière automatique et transparente, qui se documentent eux-mêmes
-                                                et sont designés pour être cassés puis reconstruits en continu</li>
+                                            <li>On produit des artefacts de manière automatique et transparente, qui se documentent eux-mêmes</li>
+                                            <li>Les composants sont designés pour être cassés puis reconstruits en continu</li>
                                         </ul>
 						
 					</p>
@@ -110,7 +110,7 @@
                                 
                                 
                                 <section>
-					<h3>Candidat : Synchronisation des annuaires (téléphonie, AD, RH)</h3>
+					<h3>Candidat : Job de Synchronisation des annuaires (téléphonie, AD, RH)</h3>
 					<p>Composants principaux :
                                             
                                         <ul>
@@ -119,15 +119,25 @@
                                         </ul>
                                 </section>
                                 
-                                <!-- Prévoir un fond d'écran sympa pour mettre en valeur cette question cruciale -->
                                 <section>
+                                    <blockquote>L'atout d'un Job est qu'il a un début, une fin et une planification : il est aisé à monitorer.</blockquote>
+                                </section>
+                                
+                                <section data-background-transition="slide" data-background="img/green-technology.jpg">
+                                    <blockquote>La plupart du temps un job ne tourne pas : c'est un très bon candidat pour les économies de ressources.</blockquote>
+                                </section>
+                                
+                                
+                                
+                                <!-- Prévoir un fond d'écran sympa pour mettre en valeur cette question cruciale -->
+                                <section data-background-transition="slide" data-background="img/time-saving-strategies.jpg">
                                     <blockquote>Combien de temps pour remonter l'environnement actuel au complet from
-                                        scratch ?...et depuis une restore ?</blockquote>
+                                        scratch ?...et depuis une backup (quand le dernier a-t-il été testé) ?</blockquote>
                                 </section>
                                 
                                 <section>
-                                    <blockquote>Le déploiement doit prendre moins de temps qu'il n'en faut pour décrire les
-                                        étapes du remontage complet des élements du processus.</blockquote>
+                                    <blockquote>... et si le déploiement nécessitait moins de temps qu'il n'en faut pour décrire les
+                                        étapes du remontage complet de la solution ?</blockquote>
                                 </section>
                                 
                                 <section>
@@ -145,9 +155,13 @@
 				</section>
                                 
                                 <!-- Backgroud lié à l'argent -->
-                                <section>
+                                <section data-background-transition="slide" data-background="img/keep-calm-and-save-money-39.png" data-background-size="80%">
+                                </section>
+                                
+                                <section data-background-transition="slide">
                                     <blockquote>1000 FCFP/run en coût de licence TDI uniquement, soit 2000 FCFP/j.</blockquote>
                                 </section>
+                                
                                 
                                 <section>
                                     <h3>Microsoft ADLDS</h3>
@@ -171,7 +185,7 @@
                                             
                                         <ul>
                                             <li>Un serveur dédié qui tourne 24/7 pour deux exécutions quotidennes de 25'</li>
-                                            <li>Un serveur LDAP complet qui tourne pour servir < 10 Mo de données</li>
+                                            <li>Un serveur LDAP complet qui tourne pour servir < 2 Mo de données</li>
                                             <li>Un ETL coûteux, sous-exploité et pas taillé pour une prise en main rapide par des développeurs</li>
                                         </ul>
 						
@@ -179,32 +193,42 @@
 				</section>
                                 
                                 <section>
-					<h2>Objectif</h2>
-					<p>Implémenter un processus :
+					<h3>Objectif</h3>
+					<p>Implémenter un processus
                                             
                                         <ul>
-                                            <li>Aisé à prendre en main par des développeurs</li>
-                                            <li>S'appuie sur des composants open source, facilement déployables (voire déja déployés en automatique) et déja exploités</li>
+                                            <li>Aisé à prendre en main par des développeurs, des robots, des admins</li>
+                                            <li>S'appuie sur des composants open source, facilement déployables (voire déja déployés en automatique) et exploités</li>
+                                        </ul>
+						
+					</p>
+				</section>
+                                <section>
+                                    <h3>Qui s'intègre ...</h3>
+                                    <p>
+                                        <ul>
                                             <li>Déployable via du code sur notre infrastructure, mais également sur des plateformes cloud ou hébergées</li>
-                                            <li>Qui s'intégre nativement dans la chaîne DevOps : build continu et déploiement continu</li>
+                                            <li>Intégration native dans la chaîne DevOps : build et déploiement continu</li>
                                         </ul>
 						
 					</p>
 				</section>
                                 
+                                
+                                
                                 <section>
-					<h3>Trajectoire</h3>
+					<h3>EAGLE !</h3>
 					<p>Rendre ce développement rapidement exploitable, on ne crée pas un prototype de laboratoire.
 					</p>
+                                        <img src="https://media.giphy.com/media/CSf4m6OSCpXjy/giphy.gif"/>
 				</section>
                                 
                                 <section>
-					<h2>Contraintes : mode opératoire</h2>
+					<h3>Mode opératoire</h3>
 					<p>
                                         <ul>
                                             <li>Coller aux technologies structurantes actuellement maîtrisées,</li>
-                                            <li>les pousser dans leurs limites,</li>
-                                            <li>ouvrir les perspectives vers des technologies plus en rupture apparente avec celles déja utilisées.</li>
+                                            <li>Ouvrir les perspectives vers des technologies plus en rupture apparente avec celles déja utilisées.</li>
                                         </ul>
                                 </p>    
                                 </section>      
@@ -223,7 +247,7 @@
 				</section>
 
                                 <section>
-					<h2>Outils</h2>
+					<h3>Outils</h3>
 					<p>Tout est versionné et buildé en continu, pour cela :
                                             
                                         <ul>
@@ -236,25 +260,20 @@
 					</p>
 				</section>
                                 
-                                <section>
-					<h2>Vagrant : l'officialisation</h2>
-					<p>Nous permet de créer et configurer des environnements de développement virtuels en toute autonomie, et via du code.</p>
-				</section>
-                                
-                                <section>
-					<h3>Jenkins</h3>
-					<img src="img/jenkins.png" alt="Jenins images"  width="40%" height="40%"/>
+                                <section data-background-transition="slide" data-background="img/What-is-vagrant-and-how-to-provision-first-VM.jpg">
+					<h3>Vagrant : l'officialisation</h3>
+					<p>Nous permet de créer et configurer des environnements de développement virtuels en toute autonomie, via du code.</p>
 				</section>
                                 
                                 
-                                <section>
+                                <section data-background-transition="slide" data-background="img/jenkins.png" data-background-size="30%">
                                         <h3>Jenkins</h3>
 					<p>Moteur d'intégration continue : c'est lui qui va travailler pour nous.</p>
 				</section>
                                 
                                 <section>
-					<h2>Le petit nouveau</h2>
-					<p>Déployé en protypage sur une Workstation musclée, sur une Fedora 26 (afin de rester dans l'écosystème des rpms)
+					<h3>Le "serveur sous le bureau"</h3>
+					<p>Déployé en protypage sur une PC musclé, sur une Fedora 26.
                                         </p>
                                         <img src="img/20171103_102613.jpg" width="29%" height="29%"/>
 				</section>
@@ -273,7 +292,7 @@
                                         <ul>
                                             <li>Les boxes</li>
                                             <li>Le provisioning (shell, puppet, chef, ansible)</li>
-                                            <li>Les Providers (VirtualBox, VmWare, aws)</li>
+                                            <li>Les Providers (VirtualBox, libvirt, VmWare Workstation, vSphere, XenServer, aws, ...)</li>
                                             <li>La destruction</li>
                                         </ul>
                                         </p>
@@ -284,14 +303,22 @@
                                         <p>
                                         <ul>
                                             <li>Provisioning avec du shell : aucun background puppet ou ansible requis</li>
-                                            <li>Code testé directement sur l'architecture cible sans demander d'environnement
-                                                d'intégration : ce dernier est monté par le développeur et le bootstrap documente les actions
-                                                menées</li>
+                                            <li>Code testé directement sur l'architecture cible sur le poste de dév</li>
+                                            <li>Le développeur, via le bootstrap.sh documente l'installation, via du code</li>
+                                        </ul>
+                                        </p>
+				</section>
+                                
+                                <section>
+					<h3>Vagrant : le coût d'entrée</h3>
+                                        <p>
+                                        <ul>
                                             <li>VirtualBox comme provider sur le poste de dev</li>
                                             <li>Culture de la construction/destruction : il est sain de régulièrement "tout casser"</li>
                                         </ul>
                                         </p>
 				</section>
+                                
                                 
                                 
                                 <section>
@@ -305,11 +332,25 @@
 					<h3>Python/fabric: l'officialisation</h3>
                                         
                                         <ul>
-                                            <li>Python est arrivé à la DSI par le SIG et ses Jobs d'intégration</li>
-                                            <li>Python est utilisé par les dévelopeurs pour automatiser et documenter des tâches répétitives</li>
+                                            <li>Arrivé à la DSI par le SIG et ses Jobs d'intégration</li>
+                                            <li>Utilisé par les dévelopeurs pour automatiser et documenter des tâches répétitives</li>
                                             <li>Fabric permet de rendre ces scripts documentables notamment dans leur exécution, y compris sur du code complexe.</li>
                                         </ul>
                                 </section>
+                                
+                                <section>
+					<h3>Python : exemples de tâches automatisées</h3>
+                                        
+                                        <ul>
+                                            <li>Intégration github/slack</li>
+                                            <li>Export/import de bases de données</li>
+                                            <li>Installation de Tomcats en intégration</li>
+                                            <li>A COMPLETER AVEC DEUX AUTRES ITEMS</li>
+                                            
+                                        </ul>
+                                </section>
+                                
+                                
                                         
                                 <section>
                                     <h3>Fabric</h3>
@@ -331,9 +372,9 @@
 				</section>
                                 
                                 
-                                <section>
-                                    <h3>Python ?</h3>
-                                        <p>Python : packagé pour toutes les plateformes, et sous toutes les formes de packaging, avec un écosystème très complet qui en rend
+                                <section data-background-transition="slide" data-background="img/1073.png" data-background-size="40%">
+                                    <h3>Python.</h3>
+                                        <p>Packagé pour toutes les plateformes, tous les OS, et sous toutes les formes de packaging, avec un écosystème très complet qui en rend
                                         l'exploitation très aisée.</p>
 				</section>
                                 
@@ -587,7 +628,7 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true },
-                                         { src: 'plugin/tagcloud/tagcloud.js', async: true } 
+                                        { src: 'plugin/tagcloud/tagcloud.js', async: true } 
 				]
 			});
 
