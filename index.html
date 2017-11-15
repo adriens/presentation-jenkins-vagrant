@@ -345,8 +345,9 @@
                                             <li>Intégration github/slack</li>
                                             <li>Export/import de bases de données</li>
                                             <li>Installation de Tomcats en intégration</li>
-                                            <li>A COMPLETER AVEC DEUX AUTRES ITEMS</li>
-                                            
+                                            <li>Création de repo Github, affectation d'équipe et collaborateurs</li>
+                                            <li>Intégration Github/Redmine : webhook</li>
+                                            <li>Activation de repo sur Travis</li>
                                         </ul>
                                 </section>
                                 
@@ -386,11 +387,44 @@
 					</p>
 				</section>
                                 
-                                <section>
-					<h3>Montage de la platforme Jenkins</h3>
-					<p>Etapes de devs, composants et leur liens à développer :</p>
+                 <section>
+					<h3>Montage de la platforme Jenkins 1/3</h3>
+					<!--<p>Etapes de devs, composants et leur liens à développer :</p>-->
+                    <p>Préparation du serveur Fedora</p>
+                    <ol>
+                        <li>Installation de Fedora 26</li>
+                        <li>Installation manuelle du rpm jenkins, l'installation via dnf ne fonctionnait pas à cause d'un problème de débit.</li>
+                        <li>Installation de Java</li>
+                        <li>Installation de Vagrant et VirtualBox, laborieux sur Fedora 26</li>
+                    </ol>
 				</section>
-                                
+
+
+                <section>
+                    <h3>Montage de la platforme Jenkins 2/3</h3>
+                    <p>Configuration de la Vagrant Box</p>
+                    <ol>
+                        <li>Téléchargement de la VagrantBox (VM) Centos7, parfois penible en fonction du débit</li>
+                        <li>Configuration de la box</li>
+                        <li>Configuration de SELinux côté Fedroa pour la synchronisation des fichiers entre le serveur et la VM Centos (3 jours)</li>
+                        <li>Génération de clé SSH pour la connexion à la VM</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h3>Montage de la platforme Jenkins 2/3</h3>
+                    <p>Configuration de Jenkins</p>
+                    <ol>
+                        <li>Plugins : intégration avec Github, Slack</li>
+                        <li>Développement en Python/Fabric du job de synchro de l'annuaire</li>
+                        <li>Mise en place des build automatiques Jenkins</li>
+                        <ul><li>branche de dev sur commit (pull)</li>
+                            <li>branche qualification via cron</li>
+                        </ul>
+                        <li>Activation des notifications en cas d'erreur et retour en marche</li>
+                    </ol>
+                </section>
+
                                 <!-- Slide fondamental sur lequel bien marquer le coup -->
                                 <section>
 					<h3>Règle de conduite</h3>
