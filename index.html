@@ -273,7 +273,7 @@
 
         <section>
             <h3>Le "serveur sous le bureau"</h3>
-            <p>Déployé en protypage sur une PC musclé, sur une Fedora 26.
+            <p>Déployé en protypage sur un PC musclé, sur une Fedora 26.
             </p>
             <img src="img/20171103_102613.jpg" width="29%" height="29%"/>
         </section>
@@ -302,7 +302,7 @@
             <h3>Vagrant : le coût d'entrée</h3>
             <p>
             <ul>
-                <li>Provisioning avec du shell : aucun background puppet ou ansible requis</li>
+                <li>Provisioning avec du shell : aucun background puppet requis</li>
                 <li>Code testé directement sur l'architecture cible sur le poste de dév</li>
                 <li>Le développeur, via le bootstrap.sh documente l'installation, via du code</li>
             </ul>
@@ -361,8 +361,8 @@
 
         <section>
             <h3>Idée</h3>
-            <blockquote>Intégrer cet outil dès le développement de nos jobs afin d'en assurer à la fois un développement cadré mais également des installations et
-                exécutions aisées, via de la configuration automatisable par des briques déja déployées sur notre SI (typiquement puppet).</blockquote>
+            <blockquote>Assurer un développement cadré, des installations et
+                exécutions aisées, via de la configuration automatisable.</blockquote>
         </section>
 
         <section>
@@ -433,7 +433,7 @@
             <ul>
                 <li>On ne stocke rien en local</li>
                 <li>On pousse/pompe vers/depuis d'autres services externes</li>
-                <li>On part du postulat que les services nécessaires (log, base de données, monitoring, ...) sont fournis par d'autres</li>
+                <li>On part du postulat que les services nécessaires (log, base de données, monitoring, ...) sont fournis</li>
             </ul>
             </p>
         </section>
@@ -453,7 +453,7 @@
                 <li>Exécution du job de synchronisation (ssh)</li>
                 <li>Envoi de logs vers des plateformes dédiées</li>
                 <li>Récupérer le code retour</li>
-                <li>Déclencer un ou des événements suite au code retour, par exemple via un Webhook slack</li>
+                <li>Déclencher un ou des événements suite au code retour, par exemple via un Webhook slack</li>
                 <li>Arrêt de la VM</li>
             </ol>
             </p>
