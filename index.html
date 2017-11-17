@@ -476,27 +476,27 @@
 
         <section>
             <h2>Le Job de synchronisation : démo en manuel</h2>
-            <p>Lancer le job manuellement, à la demande</p>
+            <p>Lancer le job manuellement, à la demande.</p>
         </section>
 
         <section>
             <h2>Le Job de synchronisation : démo en cron</h2>
-            <p>En production, besoin d'exécutions périodiques</p>
+            <p>En production, besoin d'exécutions périodiques.</p>
         </section>
 
         <section>
             <h2>Le Job de synchronisation : déploiement continu</h2>
-            <p>Démo d'un run qui démarre tout seul suite à un événement sur du code change sur une branche spécifique</p>
+            <p>Démo d'un run qui démarre tout seul suite à un événement sur du code changé sur une branche spécifique.</p>
         </section>
 
         <section>
             <h2>Déploiement continu : objectif atteint</h2>
         </section>
         <section>
-            <h2>Rappel de toutes les étapes mises en oeuvre</h2>
+            <h2>Rappel des étapes</h2>
             <ul>
                 <li>Mise à jour du code sur Github et tag de la version</li>
-                <li>Merge sur la branche "Testing"</li>
+                <li>Merge sur la branche "QUAL"</li>
                 <li>Jenkins fera le checkout du nouveau code et exécutera la nouvelle version du job au horaires habituels</li>
                 <li>Si le job requière de nouvelles libs, elles seront téléchargées et installées lors du démarrage de la VM (via VagrantFile)</li>
             </ul>
@@ -513,6 +513,11 @@
 
         <section>
             <blockquote>Différences entre déploiement et exécution ?</blockquote>
+        </section>
+        
+        <section>
+            <h3>La transition</h3>
+            <blockquote>Transformer le déploiement en exécution.</blockquote>
         </section>
 
         <section>
@@ -532,7 +537,7 @@
             <p>Les gains par rapport à aujourd'hui
             <ul>
                 <li>Création des VMs à la demande : actuellement 2 serveurs tournent en continu la plupart du temps pour rien et ne se mettent pas à jour</li>
-                <li>La Box vagrant utilisée n'est pas maintenue par les infras : il suffit pour cela de créer notre propre template CentOS 7 : nous sommes dans DevOps</li>
+                <li>La Box Vagrant utilisée n'est pas maintenue par les infras : il suffit pour cela de créer notre propre template CentOS 7 : nous sommes dans DevOps</li>
 
             </ul>
             </p>
@@ -565,8 +570,8 @@
             <p>
             <ul>
 
-                <li>Sur jenkins, on clique au lieu de coder les choses</li>
-                <li>Quant on veut faire tourner le build sur Travis, les paquets rpm et deb n'ont pas forcément les mêmes noms</li>
+                <li>Sur Jenkins, on clique au lieu de coder les choses</li>
+                <li>Quand on veut faire tourner le build sur Travis, les paquets rpm et deb n'ont pas forcément les mêmes noms</li>
             </ul>
 
             </p>
@@ -577,9 +582,10 @@
             <!-- Mettre une belle image pour commecner à entamer la transition -->
             <h3>Avec Travis c'est "plus facile et plus rapide"</h3>
             <ul>
-                <li>Tout n'est que code, y compris la configuration du robot</li>
-                <li>On a pas besoin de demander des accès à des ressources</li>
+                <li>Tout n'est que code, y compris la configuration</li>
+                <li>On n'a pas besoin de demander des accès à des ressources</li>
                 <li>On ne consomme aucune ressource ni sur nos postes ni sur notre infra</li>
+                <li>Les accès aux repos sont très rapides (on est sur Amazon)</li>
             </ul>
         </section>
 
@@ -632,9 +638,17 @@
          </section>
          -->
         <section>
-            Avec la virtualisation, les systèmes d’exploitation ont pu être dissociés des machines sur lesquels ils tournent.
-            <br/><br/>Avec la conteneurisation, ce sont les logiciels eux-mêmes qui gagnent de l’autonomie vis-à-vis des systèmes d’exploitation.
-            <br/><br/>Ils s’adaptent, sans développements supplémentaires, à tous les environnements.
+            <blockquote>Avec la virtualisation, les systèmes d’exploitation ont pu être dissociés des machines sur lesquels ils tournent.</blockquote>
+         
+        </section>
+         
+         <section>
+            
+             <blockquote>Avec la conteneurisation, ce sont les logiciels eux-mêmes qui gagnent de l’autonomie vis-à-vis des systèmes d’exploitation.</blockquote>
+        </section>
+         
+         <section>
+             <blockquote>Les logiciels s’adaptent sans développements supplémentaires, à tous les environnements.</blockquote>
         </section>
 
 
@@ -657,7 +671,7 @@
             branch
             Provider
             Provisioning
-            bootrstrap
+            bootstrap
             VSphere
             VirtualBox
             Build continu
