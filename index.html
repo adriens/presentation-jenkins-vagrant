@@ -358,13 +358,13 @@
             <h3>Industrialisation du Sprint 0 et intégration d'outils Cloud via du service</h3>
             <ul>
                 <li>Initialisation de projets java et liquibase</li>
-                    <ul><li>Clonage des archetypes maven dispos sur Github</li>
-                        <li>Génération des squelettes des projets à partir des archetypes</li>
-                    </ul>
+                <ul><li>Clonage des archetypes maven dispos sur Github</li>
+                    <li>Génération des squelettes des projets à partir des archetypes</li>
+                </ul>
                 <li>Création des repos sur Github via api Python Github</li>
-                    <ul><li>Push du code sur les repos</li>
-                        <li>Attribution des accès</li>
-                    </ul>
+                <ul><li>Push du code sur les repos</li>
+                    <li>Attribution des accès</li>
+                </ul>
             </ul>
         </section>
 
@@ -401,7 +401,7 @@
         </section>
 
         <section data-background-transition="slide">
-        <!--<section data-background-transition="slide" data-background="img/python-logo.png" data-background-size="40%">-->
+            <!--<section data-background-transition="slide" data-background="img/python-logo.png" data-background-size="40%">-->
             <!--<h3>Python.</h3>-->
             <img src="img/python-logo.png" >
             <p>Packagé pour toutes les plateformes, tous les OS, et sous toutes les formes de packaging, avec un écosystème très complet qui en rend
@@ -534,21 +534,29 @@
             <h2>Déploiement continu : objectif atteint</h2>
         </section>
         <section>
-            <h2>Rappel des étapes</h2>
+            <h2>Etapes d'un déploiement de job à la DSI</h2>
+            <ul class="large_list">
+                <li>Mise à jour du code sur Github et tag de la version par le SED pour la semaine suivante</li>
+                <li>Une demande de déploiement contenant la procédure à suivre est rédigée par le SED</li>
+                <li>Le lundi matin, réunion à 9h entre SED et SIE-Infra pour planifier les demandes</li>
+                <li>Si trop de demandes, les déploiements sont décallés à la semaine suivante</li>
+                <li>Chaque mardi et jeudi, les déploiements sont effectués par le SIE, en suivant la procédure de déploiement</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Etapes du processus de maintenance</h2>
+            <ul>
+                <li>Si le job requière de nouvelles libs, le SED doit faire une demande d'action en pré-requis à la demande de déploiement</li>
+                <li>Le SIE planifie la demande : les lib devront être téléchargées et installées manuellement par le SIE</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Etapes du déploiement avec Jenkins</h2>
             <ul>
                 <li>Mise à jour du code sur Github et tag de la version</li>
                 <li>Merge sur la branche "QUAL"</li>
                 <li>Jenkins fera le checkout du nouveau code et exécutera la nouvelle version du job au horaires habituels</li>
                 <li>Si le job requière de nouvelles libs, elles seront téléchargées et installées lors du démarrage de la VM (via VagrantFile)</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Mise en parallèle avec le mode actuel</h2>
-            <ul>
-                <li>Mise à jour du code sur Github et tag de la version</li>
-                <li>Une demande de déploiement contenant la procédure à suivre est faite pour la semaine suivante sur validation du SIE</li>
-                <li>Chaque mardi et jeudi, les déploiements sont effectués par le SIE, en suivant la procédure de déploiement</li>
-                <li>Si le job requière de nouvelles libs, elles devront être téléchargées et installées par le SIE</li>
             </ul>
         </section>
 
@@ -665,13 +673,13 @@
 
         </section>
 
-         <section>
+        <section>
 
-             <blockquote>Avec la conteneurisation, ce sont les logiciels eux-mêmes qui gagnent de l’autonomie vis-à-vis des systèmes d’exploitation.</blockquote>
+            <blockquote>Avec la conteneurisation, ce sont les logiciels eux-mêmes qui gagnent de l’autonomie vis-à-vis des systèmes d’exploitation.</blockquote>
         </section>
 
-         <section>
-             <blockquote>Les logiciels s’adaptent sans développements supplémentaires, à tous les environnements.</blockquote>
+        <section>
+            <blockquote>Les logiciels s’adaptent sans développements supplémentaires, à tous les environnements.</blockquote>
         </section>
 
 
