@@ -374,7 +374,7 @@
                 <li>Activation des repos sur Travis pour l'intégration continue</li>
                 <li>Création de channels Slack pour le suivi des dev (api Python Slack)</li>
                 <li>Encryption des différentes variables utilisées dans Travis</li>
-                <li>Création de webhook Github/Redmine</li>
+                <li>Création de webhook Github/Redmine pour le suivi des commits</li>
             </ul>
         </section>
 
@@ -458,7 +458,7 @@
             <h3>Exploitation</h3>
             <ol>
                 <li>Développement en Python/Fabric du job de synchro de l'annuaire</li>
-                <li>Mise en place des build automatiques Jenkins</li>
+                <li>Mise en place des builds automatiques Jenkins</li>
                 <ul><li>branche de dev sur commit (pull)</li>
                     <li>branche qualification via cron</li>
                 </ul>
@@ -546,7 +546,7 @@
         <section>
             <h2>Etapes du processus de maintenance</h2>
             <ul>
-                <li>Si le job requière de nouvelles libs, le SED doit faire une demande d'action en pré-requis à la demande de déploiement</li>
+                <li>Si le job requiert de nouvelles libs, le SED doit faire une demande d'action en pré-requis à la demande de déploiement</li>
                 <li>Le SIE planifie la demande : les lib devront être téléchargées et installées manuellement par le SIE</li>
             </ul>
         </section>
@@ -556,7 +556,7 @@
                 <li>Mise à jour du code sur Github et tag de la version</li>
                 <li>Merge sur la branche "QUAL"</li>
                 <li>Jenkins fera le checkout du nouveau code et exécutera la nouvelle version du job au horaires habituels</li>
-                <li>Si le job requière de nouvelles libs, elles seront téléchargées et installées lors du démarrage de la VM (via VagrantFile)</li>
+                <li>Si le job requiert de nouvelles libs, elles seront téléchargées et installées lors du démarrage de la VM (provisionning)</li>
             </ul>
         </section>
 
