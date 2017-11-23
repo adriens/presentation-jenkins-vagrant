@@ -124,7 +124,7 @@
             <blockquote>L'atout d'un Job est qu'il a un début, une fin et une planification : il est aisé à monitorer.</blockquote>
         </section>
 
-        <section data-background-transition="slide" data-background="img/green-technology.jpg">
+        <section data-background-transition="slide" data-background="img/green-technology_dark.jpg">
             <blockquote>La plupart du temps un job ne tourne pas : c'est un très bon candidat pour les économies de ressources.</blockquote>
         </section>
 
@@ -264,7 +264,6 @@
         <!--<section data-background-transition="slide" data-background="img/What-is-vagrant-and-how-to-provision-first-VM.jpg">-->
         <section data-background-transition="slide">
             <img src="img/vagrant.png" width="40%">
-            <h3>L'officialisation</h3>
             <p>Nous permet de créer et configurer des environnements de développement virtuels en toute autonomie, via du code.</p>
         </section>
 
@@ -347,7 +346,6 @@
             <h3>Python : exemples de tâches automatisées</h3>
 
             <ul>
-                <li>Intégration github/slack</li>
                 <li>Export/import de bases de données</li>
                 <li>Installation de Tomcats en intégration</li>
                 <li>Industrialisation du Sprint 0</li>
@@ -355,13 +353,14 @@
         </section>
 
         <section>
-            <h3>Industrialisation du Sprint 0 et intégration d'outils Cloud via du service</h3>
+            <h3>Industrialisation du Sprint 0</h3>
+            <!--<h3>Industrialisation du Sprint 0 et intégration d'outils Cloud via du service</h3>-->
             <ul>
                 <li>Initialisation de projets java et liquibase</li>
                 <ul><li>Clonage des archetypes maven dispos sur Github</li>
                     <li>Génération des squelettes des projets à partir des archetypes</li>
                 </ul>
-                <li>Création des repos sur Github via api Python Github</li>
+                <li>Création des repos sur Github (api Python Github)</li>
                 <ul><li>Push du code sur les repos</li>
                     <li>Attribution des accès</li>
                 </ul>
@@ -369,10 +368,11 @@
         </section>
 
         <section>
-            <h3>Industrialisation du Sprint 0 et intégration d'outils Cloud via du service</h3>
+            <h3>Industrialisation du Sprint 0</h3>
+            <!--<h3>Industrialisation du Sprint 0 et intégration d'outils Cloud via du service</h3>-->
             <ul>
                 <li>Activation des repos sur Travis pour l'intégration continue</li>
-                <li>Création de channels Slack pour le suivi des dev via api Python Slack</li>
+                <li>Création de channels Slack pour le suivi des dev (api Python Slack)</li>
                 <li>Encryption des différentes variables utilisées dans Travis</li>
                 <li>Création de webhook Github/Redmine</li>
             </ul>
@@ -419,14 +419,14 @@
         <section>
             <h3>Montage de la platforme</h3>
             <!--<p>Etapes de devs, composants et leur liens à développer :</p>-->
-            <ol>
+            <ol class="large_list">
                 <li>Installation de l'OS</li>
-                <li>Installation manuelle de Jenkins, puis plugins pour intégration avec Github et Slack</li>
+                <li>Installation manuelle de Jenkins, puis des plugins pour s'intégrer avec Github et Slack</li>
                 <li>Installation de Vagrant et VirtualBox, laborieux sur Fedora 26</li>
                 <li>Téléchargement(s) de la VagrantBox (VM) CentOS 7</li>
                 <li>Configuration de SELinux côté Fedora pour la synchronisation des fichiers entre le serveur et la VM CentOS (3 jours)</li>
             </ol>
-            <p>Difficultés rencontrées : débit, spécificités de l'OS (SE Linux)</p>
+            <p style="font-size:30px">Difficultés rencontrées : débit, spécificités de l'OS (SE Linux)</p>
         </section>
 
 
@@ -462,7 +462,7 @@
                 <ul><li>branche de dev sur commit (pull)</li>
                     <li>branche qualification via cron</li>
                 </ul>
-                <li>Activation des notifications en cas d'erreur et retour en marche</li>
+                <li>Activation des notifications dans Slack en cas d'erreur et de retour en marche</li>
                 <li>Extinction de la VM à la fin du job/build</li>
             </ol>
         </section>
@@ -526,18 +526,18 @@
         </section>
 
         <section>
-            <h2>Le Job de synchronisation : déploiement continu</h2>
+            <h2>Le Job de synchronisation déploiement continu</h2>
             <p>Démo d'un run qui démarre tout seul suite à un événement sur du code changé sur une branche spécifique.</p>
         </section>
 
         <section>
-            <h2>Déploiement continu : objectif atteint</h2>
+            <h2>Déploiement continu objectif atteint</h2>
         </section>
         <section>
             <h2>Etapes d'un déploiement de job à la DSI</h2>
             <ul class="large_list">
-                <li>Mise à jour du code sur Github et tag de la version par le SED pour la semaine suivante</li>
-                <li>Une demande de déploiement contenant la procédure à suivre est rédigée par le SED</li>
+                <li>Mise à jour du code sur Github et tag de la version par le SED</li>
+                <li>Une demande de déploiement contenant la procédure à suivre est rédigée par le SED (pour la semaine N+1)</li>
                 <li>Le lundi matin, réunion à 9h entre SED et SIE-Infra pour planifier les demandes</li>
                 <li>Si trop de demandes, les déploiements sont décallés à la semaine suivante</li>
                 <li>Chaque mardi et jeudi, les déploiements sont effectués par le SIE, en suivant la procédure de déploiement</li>
