@@ -1,0 +1,11 @@
+.dark_image {
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    -o-filter: brightness(50%);
+    -ms-filter: brightness(50%);
+}
+
+.large_list li{
+    font-size: 30px;
+}
