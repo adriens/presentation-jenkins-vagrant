@@ -337,8 +337,8 @@
 
             <ul>
                 <li>Arrivé à la DSI par le SIG et ses Jobs d'intégration</li>
-                <li>Utilisé par les dévelopeurs pour automatiser et documenter des tâches répétitives</li>
-                <li>Fabric permet de rendre ces scripts documentables notamment dans leur exécution, y compris sur du code complexe.</li>
+                <li>Utilisé par les dévelopeurs pour automatiser et documenter des tâches répétitives et complexes</li>
+                <li>Fabric permet de rendre ces scripts documentables notamment dans leur exécution.</li>
             </ul>
         </section>
 
@@ -346,7 +346,7 @@
             <h3>Python : exemples de tâches automatisées</h3>
 
             <ul>
-                <li>Export/import de bases de données</li>
+                <li>Export/import de bases de données, download/upload ftp, màj de Redmine, ...</li>
                 <li>Installation de Tomcats en intégration</li>
                 <li>Industrialisation du Sprint 0</li>
             </ul>
@@ -404,7 +404,7 @@
             <!--<section data-background-transition="slide" data-background="img/python-logo.png" data-background-size="40%">-->
             <!--<h3>Python.</h3>-->
             <img src="img/python-logo.png" >
-            <p>Packagé pour toutes les plateformes, tous les OS, et sous toutes les formes de packaging, avec un écosystème très complet qui en rend
+            <p>Packagé pour toutes les plateformes, tous les OS, avec un écosystème plus que complet qui en rend
                 l'exploitation très aisée.</p>
         </section>
 
@@ -459,7 +459,7 @@
             <ol>
                 <li>Développement en Python/Fabric du job de synchro de l'annuaire</li>
                 <li>Mise en place des builds automatiques Jenkins</li>
-                <ul><li>branche de dev sur commit (pull)</li>
+                <ul><li>branche de dev sur commit</li>
                     <li>branche qualification via cron</li>
                 </ul>
                 <li>Activation des notifications dans Slack en cas d'erreur et de retour en marche</li>
@@ -468,6 +468,18 @@
         </section>
 
         <!-- Slide fondamental sur lequel bien marquer le coup -->
+        <section>
+            <h3>PAAS</h3>
+            <p>
+            <blockquote>[...] permet de mettre à disposition des entreprises
+                un environnement d'exécution rapidement disponible, en leur laissant la maîtrise
+                des applications qu'elles peuvent installer, configurer et utiliser elles-mêmes.
+                Il permet donc d'héberger des applications qui ne sont pas adaptées au modèle du
+                SaaS (par exemple des applications spécifiques, [...].</blockquote>
+            </p>
+        </section>
+        
+        
         <section>
             <h3>Règle de conduite</h3>
             <p>
@@ -539,12 +551,12 @@
                 <li>Mise à jour du code sur Github et tag de la version par le SED</li>
                 <li>Une demande de déploiement contenant la procédure à suivre est rédigée par le SED (pour la semaine N+1)</li>
                 <li>Le lundi matin, réunion à 9h entre SED et SIE-Infra pour planifier les demandes</li>
-                <li>Si trop de demandes, les déploiements sont décallés à la semaine suivante</li>
+                <li>Si trop de demandes, les déploiements sont décalés à la semaine suivante</li>
                 <li>Chaque mardi et jeudi, les déploiements sont effectués par le SIE, en suivant la procédure de déploiement</li>
             </ul>
         </section>
         <section>
-            <h2>Etapes du processus de maintenance</h2>
+            <h2>Cas : mise à jour driver psql</h2>
             <ul>
                 <li>Si le job requiert de nouvelles libs, le SED doit faire une demande d'action en pré-requis à la demande de déploiement</li>
                 <li>Le SIE planifie la demande : les lib devront être téléchargées et installées manuellement par le SIE</li>
@@ -555,7 +567,7 @@
             <ul>
                 <li>Mise à jour du code sur Github et tag de la version</li>
                 <li>Merge sur la branche "QUAL"</li>
-                <li>Jenkins fera le checkout du nouveau code et exécutera la nouvelle version du job au horaires habituels</li>
+                <li>Jenkins fera le checkout du nouveau code et exécutera la nouvelle version du job aux horaires habituels</li>
                 <li>Si le job requiert de nouvelles libs, elles seront téléchargées et installées lors du démarrage de la VM (provisionning)</li>
             </ul>
         </section>
@@ -647,7 +659,7 @@
 
         <section>
             <blockquote>Ne peut-t-on préparer une petite "image" qui tournerait partout...sur
-                du debian, du CentOS, du Mac, du Windows ou n'importe quel autre système qui saurait récupérer puis exécuter ce type d'artifact ?</blockquote>
+                du debian, du CentOS, du Mac, du Windows ou n'importe quel autre système qui saurait récupérer puis exécuter ce type d'artefact ?</blockquote>
         </section>
 
         <!-- Mettre un slide image pour annoncer une révolution/changement de paradigme -->
