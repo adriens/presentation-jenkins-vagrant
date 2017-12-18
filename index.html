@@ -208,7 +208,7 @@
             <h3>Qui s'intègre ...</h3>
             <p>
             <ul>
-                <li>Déployable via du code sur notre infrastructure, mais également sur des plateformes cloud ou hébergées</li>
+                <li>Déployable via du code sur notre infrastructure, mais également sur des plateformes cloud ou hébergées (PaaS)</li>
                 <li>Intégration native dans la chaîne DevOps : build et déploiement continu</li>
             </ul>
 
@@ -276,7 +276,7 @@
         </section>
 
         <section>
-            <h3>Le "serveur sous le bureau"</h3>
+            <h3>Le "serveur <s>sous</s> sur le bureau"</h3>
             <p>Déployé en protypage sur un PC musclé, sur une Fedora 26.
             </p>
             <img src="img/20171103_102613.jpg" width="29%" height="29%"/>
@@ -338,7 +338,7 @@
             <ul>
                 <li>Arrivé à la DSI par le SIG et ses Jobs d'intégration</li>
                 <li>Utilisé par les dévelopeurs pour automatiser et documenter des tâches répétitives et complexes</li>
-                <li>Fabric permet de rendre ces scripts documentables notamment dans leur exécution.</li>
+                <li>Fabric permet de rendre ces scripts documentables notamment dans leur exploitation.</li>
             </ul>
         </section>
 
@@ -351,6 +351,13 @@
                 <li>Industrialisation du Sprint 0</li>
             </ul>
         </section>
+        
+        <section>
+            <h3>Python...</h3>
+
+            <blockquote>y'a toujours une lib disponible pour faire ce que l'on veut.</blockquote>
+        </section>
+        
 
         <section>
             <h3>Industrialisation du "Sprint 0"</h3>
@@ -372,7 +379,7 @@
             <!--<h3>Industrialisation du Sprint 0 et intégration d'outils Cloud via du service</h3>-->
             <ul>
                 <li>Activation des repos sur Travis pour l'intégration continue</li>
-                <li>Création de channels Slack pour le suivi des dev (api Python Slack)</li>
+                <li>Création de channels Slack pour le suivi des dev (native Python Slack api)</li>
                 <li>Encryption des différentes variables utilisées dans Travis</li>
                 <li>Création de webhook Github/Redmine pour le suivi des commits</li>
             </ul>
@@ -456,7 +463,7 @@
         </section>
 
         <section>
-            <h3>Exploitation</h3>
+            <h3>Exploitation du Job</h3>
             <ol>
                 <li>Développement en Python/Fabric du job de synchro de l'annuaire</li>
                 <li>Mise en place des builds automatiques Jenkins</li>
@@ -572,7 +579,7 @@
             <h2>Cas : mise à jour driver psql</h2>
             <ul>
                 <li>Si le job requiert de nouvelles libs, le SED doit faire une demande d'action en pré-requis à la demande de déploiement</li>
-                <li>Le SIE planifie la demande : les lib devront être téléchargées et installées manuellement par le SIE</li>
+                <li>Le SIE planifie la demande : les lib devront être téléchargées et installées manuellement (si non puppetisées) par le SIE</li>
             </ul>
         </section>
         <section>
@@ -634,7 +641,7 @@
             <ul>
                 <li>Pas habitué à gérer des problèmes propres aux distrib rpm : SELinux (rsync between vagrant image and code)</li>
                 <li>Mises à jour parfois lentes des vms ou des téléchargement initiaux des boxes</li>
-                <li>Il a fallu monter une machine complète avec un OS complet, installer les paquets, configurer Jenkins, ...</li>
+                <li>Il a fallu monter une machine complète et dédiée avec un OS complet, installer les paquets, configurer Jenkins, ...</li>
             </ul>
 
             </p>
@@ -645,8 +652,8 @@
             <p>
             <ul>
 
-                <li>Sur Jenkins, on clique au lieu de coder les choses</li>
-                <li>Quand on veut faire tourner le build sur Travis, les paquets rpm et deb n'ont pas forcément les mêmes noms</li>
+                <li>Sur Jenkins, on a du davantage cliquer que sur Travis</li>
+                <li>Quand on veut faire tourner le build sur Travis, les paquets rpm et deb n'ont pas forcément les mêmes noms (contraintes spécifiques OS)</li>
             </ul>
 
             </p>
@@ -657,7 +664,7 @@
             <!-- Mettre une belle image pour commecner à entamer la transition -->
             <h3>Avec Travis c'est "plus facile et plus rapide"</h3>
             <ul>
-                <li>Tout n'est que code, y compris la configuration</li>
+                <li>Tout n'est que code, y compris la configuration : il n'y a pas le choix</li>
                 <li>On n'a pas besoin de demander des accès à des ressources</li>
                 <li>On ne consomme aucune ressource ni sur nos postes ni sur notre infra</li>
                 <li>Les accès aux repos sont très rapides (on est sur Amazon)</li>
@@ -738,7 +745,7 @@
                 <li>Peut-on faire cela pour toutes nos applis publiées ?</li>
                 <li>Publier les services existants sur le web pour pouvoir les monitorer plus rapidement ?</li>
                 <li>Développer et déployer les applications en "www first" ?</li>
-                <li>Déployer/protoyper la technologie pour monitorer l'interne avec la même technologie ?</li>
+                <li>Déployer/prototyper le monitoring de l'interne avec la même technologie ?</li>
                 <li>Inclure dès le début le "cloud hybride"</li>
                 <li>Intégrer les services de monitoring en SaaS</li>
                 <li>Utiliser Travis comme un "vpn vers le www"</li>
